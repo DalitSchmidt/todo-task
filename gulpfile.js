@@ -7,7 +7,6 @@ var sourcemaps  = require('gulp-sourcemaps');
 var livereload  = require('gulp-livereload');
 
 gulp.task('build', function () {
-    // app.js is your main JS file with all your module inclusions
     return browserify({entries: './src/index.js', debug: true})
         .transform("babelify", { presets: ["es2015"] })
         .bundle()
